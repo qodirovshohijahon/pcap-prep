@@ -16,7 +16,6 @@
 
     p1.compare_age(p3) ➞ "Lily is the same age as me."
 """
-
 class Person:
 	def __init__(self, name, age):
 		self.name = name
@@ -24,9 +23,9 @@ class Person:
 
 	def compare_age(self, other):
 		# Write code here!
-        if other.age > self.age:
-          return f"{self.name} is older than me."
-        elif other.age < self.age:
-            return f"{self.name} is older than me."
-        else:
-            return f"{self.name} is older than me."
+            if self.age < other.age:
+                return other.name + ' is older than me.'
+            elif self.age > other.age:
+                return other.name +' is younger than me.'
+            elif self.age == other.age:
+                return other.name +' is the same age as me.'
